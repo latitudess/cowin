@@ -1,2 +1,2 @@
 # cowin
-Setu API integration for open slots filter
+Setu API integration for open slots

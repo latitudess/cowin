@@ -1,0 +1,328 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+}
+.page-wrapper {
+  width: 640px;
+  background: #ffffff;
+  padding: 1em;
+  margin: 1em auto;
+  border-top: 5px solid #69c773;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+h1 {
+  margin-top: 0;
+}
+label {
+  display: block;
+  margin-top: 0.5em;
+  color: #999999;
+}
+input {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  font-size: 1.2em;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+}
+.orange {
+  background: #ffa754;
+  border-bottom: 1px solid #8b6149;
+  color: #000000;
+}
+button {
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8em;
+  background: #69c773;
+  border-bottom: 1px solid #498b50;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+button:hover,
+button:focus {
+  opacity: 0.75;
+  cursor: pointer;
+}
+button:active {
+  opacity: 1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+#data-grid .ag-root-wrapper,
+#data-grid .ag-root-wrapper .ag-root-wrapper-body {
+  height: auto !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+  background-color: #fafafa;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: 0.25em 0 0.75em;
+}
+
+table tr {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table td img {
+  text-align: center;
+}
+
+.filter-container {
+  display: flex;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  flex-direction: row;
+}
+.page1-wrapper {
+  width: 95%;
+  background: #ffffff;
+  padding: 1em;
+  margin: 1em auto;
+  border-top: 5px solid #69c773;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.date {
+  min-width: 115px;
+}
+.time {
+  font-size: x-small;
+}
+
+#result {
+  display: block;
+  right: 0px;
+  width: fit-content;
+  top: 15px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+  color: red;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.box select {
+  background-color: #69c773;
+  color: white;
+  padding: 5px;
+  min-width: 250px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 0px 5px rgb(0 0 0 / 80%);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  border-radius: 5px;
+}
+
+.box select option {
+  padding: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .box select {
+    width: 250px;
+  }
+  .topbox {
+    margin-top: 10px;
+  }
+  .page1-wrapper {
+    width: 95%;
+    background: #ffffff;
+    padding: 1em;
+    margin: 1em auto;
+    border-top: 5px solid #69c773;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .filter-container {
+    display: flex;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    flex-direction: column;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .box select {
+    width: 250px;
+  }
+  .topbox {
+    margin-top: 10px;
+  }
+  .page1-wrapper {
+    width: 95%;
+    background: #ffffff;
+    padding: 1em;
+    margin: 1em auto;
+    border-top: 5px solid #69c773;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 80%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .filter-container {
+    display: flex;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    flex-direction: column;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.paid {
+  box-shadow: 2px 7px 10px rgb(245 222 179);
+  border: 1px solid #9e1919;
+  border-radius: 5px;
+  font-size: smaller;
+  padding: 0px 3px;
+}
+
+.age {
+  min-width: 65px;
+}
+
+.cowin-img {
+  background-image: url(https://selfregistration.cowin.gov.in/assets/images/covid19logo.jpg);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 27px;
+  text-align: center;
+  font-size: 80%;
+}
+
+
+#global-search {
+  margin-bottom: 5px;
+  padding: 10px;
+}
